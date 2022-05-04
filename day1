@@ -1,0 +1,18 @@
+#################################          DAY 1 :         ###################################################
+        #########      GEEKS FOR GEEKS PRACTICE : 3 EASY QUESTIONS , 2 MEDIUM , 1 HARD   ################
+
+#####  EASY QUESTION 1:
+
+class Solution:
+    def permute(self,arr,n):
+        #Complete the function
+        dict={}
+        li=[]
+        for i in range(len(arr)):
+            dict[i]=arr[i][0]+arr[i][1]
+        
+        sorted_x=sorted(dict.items(),key=lambda kv:kv[1])
+        
+        for i in sorted_x:
+            li.append(i[0]+1)
+        return li
